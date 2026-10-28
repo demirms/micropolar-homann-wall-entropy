@@ -1,0 +1,27 @@
+# Run order for the code archive (one script per line; run from this folder: python <script>)
+# All outputs are written to output/ (reference outputs of the original run are shipped there).
+# 1. Main results (Tables 2, 3, 5; node location of Figure 1) and draft figures
+make_results_K2.py
+# 2. Numerical verification (Table 1 Newtonian rows, Table 4, convergence and solver-agreement numbers)
+verify_numerics_K2.py
+# 3. Numbers quoted in the Results section (Table 5 columns S_ex, Vr*)
+extra_K2.py
+# 4. Excess-entropy decomposition (Table 6, data of Figure 5, truncated-domain test)
+reviewer_checks_K2.py
+# 5. Markdown tables assembled from the JSON results (Tables 1, 2, 3, 5, 6)
+make_tables_K2.py after: make_results_K2.py, verify_numerics_K2.py, extra_K2.py, reviewer_checks_K2.py
+# 6. Figures 1-5 (output/figures/Figure_N.pdf, .png)
+make_figures_v1_K2.py after: make_results_K2.py, reviewer_checks_K2.py
+# 7. Consistency checks (dissipative-heating correction, alpha_c convergence, residuals)
+checks_K2_review2.py
+# 8. Screen-output checks (published micropolar data; tensor form of the entropy expression)
+validate_borrelli2013.py
+verify_entropy_tensor_cyl.py
+# 9. Independent Chebyshev code and the checks that use it
+independent_chebyshev_K2.py
+hermite_correction_K2.py
+independent_wall_entropy_validation_K2.py
+point_separation_magnitude_K2.py
+parameter_realism_K2.py
+theta_min_supercritical_K2.py
+v1_extra_numbers_K2.py after: independent_chebyshev_K2.py
