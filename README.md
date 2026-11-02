@@ -1,10 +1,15 @@
-# Wall-stress nodes and minimum wall entropy generation in micropolar Homann flow over a translating plate
+# Wall-Stress Nodes, Heat Transfer, and Entropy Generation in Micropolar Homann Flow Over a Translating Plate
 
 Code accompanying the article of the same title by Mehmet Şirin Demir (Istanbul University-Cerrahpaşa).
 
 This repository contains the solver and all scripts that produce the numbers, tables and figures of the article
 (axisymmetric Homann stagnation-point flow of an electrically conducting micropolar fluid towards a vertical plate
-translating in its own plane; skin-friction node, couple-stress node and minimum of the wall entropy generation).
+translating in its own plane; skin-friction node, couple-stress node, minimum of the wall entropy generation, and the
+wall heat flux compared with the Newtonian solution at an effective Prandtl number).
+
+Some intermediate numbers written by the scripts (for example individual wall-entropy shares, the maximum of theta for
+alpha = 2.4 and the node-separation ratios at Ha = 0) were quoted in an earlier version of the text; they are kept in the
+outputs for completeness. Table and figure numbers refer to the current version of the article.
 
 ## Environment
 
@@ -69,7 +74,7 @@ Run times are given at the end of this file.
 | `independent_wall_entropy_validation_K2.py` | `independent_wall_entropy_validation_K2.json` | independent N_s(0), Be(0) of Table 5, minimum point of Table 3, validation table |
 | `point_separation_magnitude_K2.py` | `point_separation_magnitude_K2.json` | node separation d and the residual wall irreversibility at the minimum (at most 1.2 % for V_r <= 2) |
 | `parameter_realism_K2.py` | `parameter_realism_K2.json` | dimensional engine-oil example (Br/Omega, Br), liquid-metal Ha, heat-generation and micro-length estimates |
-| `theta_min_supercritical_K2.py` | screen | minimum and maximum of theta for alpha = 3 and 2.4 quoted in the text |
+| `theta_min_supercritical_K2.py` | screen | minimum and maximum of theta for alpha = 3 and 2.4 (the minimum for alpha = 3 is quoted in the text) |
 | `v1_extra_numbers_K2.py` | `v1_extra_numbers_K2.json` | eta_99 versus micro-length, node-separation ratios, (4 - alpha_c)/sqrt(Pr) |
 | `check_heat_flux_mapping.py` | `check_heat_flux_mapping.json` | Results, heat-flux paragraph: wall heat flux of the micropolar flow against the Newtonian solution at the effective Prandtl number (0.15 % at Pr = 0.7, 0.93 % at Pr = 7 for Delta_m <= 5) |
 
