@@ -25,3 +25,5 @@ point_separation_magnitude_K2.py
 parameter_realism_K2.py
 theta_min_supercritical_K2.py
 v1_extra_numbers_K2.py after: independent_chebyshev_K2.py
+# 10. Effective-viscosity mapping of the wall heat flux (Results, heat-flux paragraph)
+check_heat_flux_mapping.py

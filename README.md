@@ -35,6 +35,7 @@ python point_separation_magnitude_K2.py
 python parameter_realism_K2.py
 python theta_min_supercritical_K2.py
 python v1_extra_numbers_K2.py
+python check_heat_flux_mapping.py
 ```
 
 Order matters only for `make_tables_K2.py` (needs the JSON files of steps 1-4), `make_figures_v1_K2.py` (needs
@@ -70,6 +71,7 @@ Run times are given at the end of this file.
 | `parameter_realism_K2.py` | `parameter_realism_K2.json` | dimensional engine-oil example (Br/Omega, Br), liquid-metal Ha, heat-generation and micro-length estimates |
 | `theta_min_supercritical_K2.py` | screen | minimum and maximum of theta for alpha = 3 and 2.4 quoted in the text |
 | `v1_extra_numbers_K2.py` | `v1_extra_numbers_K2.json` | eta_99 versus micro-length, node-separation ratios, (4 - alpha_c)/sqrt(Pr) |
+| `check_heat_flux_mapping.py` | `check_heat_flux_mapping.json` | Results, heat-flux paragraph: wall heat flux of the micropolar flow against the Newtonian solution at the effective Prandtl number (0.15 % at Pr = 0.7, 0.93 % at Pr = 7 for Delta_m <= 5) |
 
 ## Reproducibility
 
